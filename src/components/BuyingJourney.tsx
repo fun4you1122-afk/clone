@@ -87,7 +87,7 @@ export default function BuyingJourney() {
   const step = steps[activeStep]
 
   return (
-    <section id="journey" className="relative bg-[#07090d]">
+    <section id="journey" className="relative bg-[#07090d] overflow-hidden w-full">
       {/* Section header */}
       <div className="container pt-28 pb-0">
         <motion.div
@@ -114,9 +114,9 @@ export default function BuyingJourney() {
         style={{ height: `${steps.length * 100}vh` }}
         className="relative"
       >
-        <div className="sticky top-0 h-screen flex overflow-hidden">
+        <div className="sticky top-0 h-screen flex overflow-hidden w-full">
           {/* Left panel */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 md:px-16 lg:px-20 relative z-10">
+          <div className="w-full lg:w-1/2 flex flex-col justify-center px-5 md:px-12 lg:px-20 relative z-10 overflow-hidden">
             {/* Step counter */}
             <div className="flex items-center gap-4 mb-10">
               <AnimatePresence mode="wait">

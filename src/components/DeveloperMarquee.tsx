@@ -5,10 +5,10 @@ const developers = [
 
 export default function DeveloperMarquee() {
   return (
-    <div className="py-8 border-y border-white/5 overflow-hidden bg-[#07090d]">
-      <div className="flex animate-marquee whitespace-nowrap">
+    <div className="py-8 border-y border-white/5 overflow-hidden w-full bg-[#07090d]">
+      <div className="flex animate-marquee whitespace-nowrap will-change-transform">
         {[...developers, ...developers].map((name, i) => (
-          <div key={i} className="flex items-center gap-8 mx-8">
+          <div key={i} className="flex items-center gap-8 mx-8 flex-shrink-0">
             <span className="text-[10px] tracking-[0.4em] text-white/20 font-medium uppercase">
               {name}
             </span>

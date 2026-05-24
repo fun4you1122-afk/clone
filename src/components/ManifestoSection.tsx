@@ -37,7 +37,7 @@ export default function ManifestoSection() {
   const line3 = ['not', 'guesswork.']
 
   return (
-    <section ref={ref} className="section-padding bg-[#07090d] relative overflow-hidden">
+    <section ref={ref} className="section-padding bg-[#07090d] relative overflow-hidden w-full">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#c9a84c]/3 blur-[120px] rounded-full pointer-events-none" />
 

@@ -1,35 +1,24 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false)
   const [form, setForm] = useState({ name: '', email: '', phone: '', interest: 'buy', message: '' })
-  const videoRef = useRef<HTMLVideoElement>(null)
 
   return (
     <section className="bg-[#07090d] relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c9a84c]/30 to-transparent" />
 
-      {/* Video band */}
+      {/* Dubai skyline background header */}
       <div className="relative w-full overflow-hidden" style={{ height: '55vh' }}>
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1920&q=80"
-        >
-          <source src="/videos/call-us.mp4" type="video/mp4" />
-        </video>
-        {/* Gradient fade top + bottom */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#07090d] via-transparent to-[#07090d]" />
-        <div className="absolute inset-0 bg-[#07090d]/40" />
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80')` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#07090d] via-[#07090d]/30 to-[#07090d]" />
 
-        {/* Overlay text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
           <motion.p
             initial={{ opacity: 0, y: 10 }}

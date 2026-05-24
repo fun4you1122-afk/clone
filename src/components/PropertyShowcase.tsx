@@ -132,7 +132,7 @@ function PropertyCard({ property, index }: { property: typeof properties[0]; ind
 
 export default function PropertyShowcase() {
   return (
-    <section className="section-padding bg-[#07090d]">
+    <section className="section-padding bg-[#07090d] overflow-hidden w-full">
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div>

@@ -19,7 +19,6 @@ export default function VideoHero() {
     <section ref={ref} className="relative h-screen min-h-[700px] overflow-hidden flex items-center justify-center">
       {/* Background video / poster */}
       <motion.div style={{ scale }} className="absolute inset-0">
-        {/* ↓ REPLACE src with your hero video URL once uploaded */}
         <video
           autoPlay
           muted
@@ -28,7 +27,7 @@ export default function VideoHero() {
           className="absolute inset-0 w-full h-full object-cover"
           poster="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80"
         >
-          {/* <source src="/videos/hero.mp4" type="video/mp4" /> */}
+          <source src="/videos/call-us.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 hero-gradient" />
         <div className="absolute inset-0 bg-[#07090d]/30" />
