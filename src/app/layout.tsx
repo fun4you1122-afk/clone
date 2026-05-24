@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "KYR Real Estate | Dubai",
     description: "Premium properties. Data-driven advice. High-profile clientele.",
-    images: ["https://i.ibb.co/8gCVs4Lf/Untitled-design-2.png"],
+    images: ["https://i.ibb.co/F4J4BkrX/Untitled-design-3.png"],
   },
 };
 

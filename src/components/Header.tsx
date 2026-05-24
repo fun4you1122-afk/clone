@@ -38,7 +38,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src="https://i.ibb.co/8gCVs4Lf/Untitled-design-2.png"
+                src="https://i.ibb.co/F4J4BkrX/Untitled-design-3.png"
                 alt="KYR Real Estate"
                 width={120}
                 height={50}

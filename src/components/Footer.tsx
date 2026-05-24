@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Image
-              src="https://i.ibb.co/8gCVs4Lf/Untitled-design-2.png"
+              src="https://i.ibb.co/F4J4BkrX/Untitled-design-3.png"
               alt="KYR Real Estate"
               width={100}
               height={40}
