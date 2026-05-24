@@ -1,24 +1,24 @@
-import VideoHero from "@/components/VideoHero";
-import DeveloperMarquee from "@/components/DeveloperMarquee";
-import ManifestoSection from "@/components/ManifestoSection";
-import BuyingJourney from "@/components/BuyingJourney";
-import UnitExperience from "@/components/UnitExperience";
-import PropertyShowcase from "@/components/PropertyShowcase";
-import VideoSection from "@/components/VideoSection";
-import GoldenVisaSection from "@/components/GoldenVisaSection";
+import Hero from "@/components/Hero";
+import Ticker from "@/components/Ticker";
+import Intro from "@/components/Intro";
+import Services from "@/components/Services";
+import Experience from "@/components/Experience";
+import Properties from "@/components/Properties";
+import Process from "@/components/Process";
+import GoldenVisa from "@/components/GoldenVisa";
 import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   return (
     <>
-      <VideoHero />
-      <DeveloperMarquee />
-      <ManifestoSection />
-      <BuyingJourney />
-      <UnitExperience />
-      <PropertyShowcase />
-      <VideoSection />
-      <GoldenVisaSection />
+      <Hero />
+      <Ticker />
+      <Intro />
+      <Services />
+      <Experience />
+      <Properties />
+      <Process />
+      <GoldenVisa />
       <ContactSection />
     </>
   );

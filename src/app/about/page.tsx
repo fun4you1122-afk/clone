@@ -1,164 +1,166 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
 const values = [
   {
     title: 'Transparency',
-    description:
-      'We share full market data, comparable sales, and fee structures upfront. No surprises, no hidden costs.',
+    desc: 'Full market data, comparable sales, and fee structures upfront. No surprises, no hidden costs.',
   },
   {
     title: 'Expertise',
-    description:
-      'Deep knowledge of every Dubai district, developer track record, and project cycle — built over years of transactions.',
+    desc: 'Deep knowledge of every Dubai district, developer track record, and project cycle — built over years.',
   },
   {
     title: 'Precision',
-    description:
-      'Every recommendation is backed by data: rental yield benchmarks, supply pipeline, and demand trends.',
+    desc: 'Every recommendation is backed by data: rental yield benchmarks, supply pipeline, and demand trends.',
   },
   {
     title: 'Discretion',
-    description:
-      'We handle high-profile clients with absolute confidentiality. Your property search stays private.',
-  },
-]
-
-const team = [
-  {
-    name: 'Khaled Al Rasi',
-    role: 'Founder & CEO',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80',
-  },
-  {
-    name: 'Yasmin Al Farsi',
-    role: 'Head of Sales',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
-  },
-  {
-    name: 'Rami Khalil',
-    role: 'Investment Advisor',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
+    desc: 'We handle high-profile clients with absolute confidentiality. Your property search stays private.',
   },
 ]
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="bg-[#030507]">
+
       {/* Hero */}
-      <section className="relative h-[55vh] min-h-[420px] flex items-center justify-center">
+      <section className="relative h-[60vh] min-h-[440px] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1920&q=80')`,
-          }}
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1920&q=80')` }}
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 text-center text-white">
-          <p className="text-[#c8a96e] tracking-[0.3em] text-sm uppercase mb-3 font-medium">
-            About Us
-          </p>
-          <h1 className="text-4xl md:text-6xl font-light tracking-wide">
-            Redefining <span className="font-bold">Real Estate</span>
-          </h1>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#030507]/50 via-[#030507]/20 to-[#030507]" />
+        <div className="relative z-10 text-center px-5">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-[#c9a84c] text-[11px] tracking-[0.42em] uppercase mb-5"
+          >
+            About KYR
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+            className="text-5xl md:text-7xl font-light text-white"
+            style={{ fontFamily: 'var(--font-cormorant)' }}
+          >
+            Redefining<br />
+            <span className="italic gold-text">Real Estate</span>
+          </motion.h1>
         </div>
       </section>
 
       {/* Story */}
-      <section className="section-padding bg-white">
+      <section className="py-28 md:py-36">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
-              <p className="text-[#c8a96e] tracking-[0.3em] text-xs uppercase mb-3 font-medium">
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="text-[#c9a84c] text-[11px] tracking-[0.42em] uppercase mb-7"
+              >
                 Our Story
-              </p>
-              <h2 className="text-3xl md:text-4xl font-light tracking-wide mb-6">
-                Built on a <span className="font-bold">Single Belief</span>
-              </h2>
-              <div className="text-gray-500 text-sm leading-relaxed space-y-4">
-                <p>
-                  KYR Real Estate was founded with one conviction: buyers and investors in
-                  Dubai deserve honest, data-backed guidance — not sales pressure or
-                  speculative hype.
-                </p>
-                <p>
-                  We are a UAE-based agency specialising in premium residential and
-                  investment properties. Our client base is high-profile, and our approach
-                  is built on discretion, precision, and deep market knowledge.
-                </p>
-                <p>
+              </motion.p>
+              <motion.h2
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight"
+                style={{ fontFamily: 'var(--font-cormorant)' }}
+              >
+                Built on a Single Belief
+              </motion.h2>
+              <div className="space-y-5 text-white/40 text-[15px] leading-relaxed">
+                <motion.p
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                >
+                  KYR Real Estate was founded with one conviction: buyers and investors in Dubai
+                  deserve honest, data-backed guidance — not sales pressure or speculative hype.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.15 }}
+                >
+                  We are a UAE-based agency specialising in premium residential and investment
+                  properties. Our client base is high-profile, and our approach is built on
+                  discretion, precision, and deep market knowledge.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
                   From off-plan opportunities with leading developers to ready-to-move luxury
                   residences, we cover the full spectrum — always putting our clients&apos;
-                  financial goals at the centre of every recommendation.
-                </p>
-                <p>
-                  Our team also provides independent Golden Visa consultation, property
-                  management, and market intelligence reports — making KYR a true
-                  full-service real estate partner.
-                </p>
+                  goals at the centre of every recommendation.
+                </motion.p>
               </div>
             </div>
-            <div
+            <motion.div
+              initial={{ opacity: 0, scale: 1.04 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.0 }}
               className="h-[480px] bg-cover bg-center"
-              style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=800&q=80')`,
-              }}
+              style={{ backgroundImage: `url('https://images.unsplash.com/photo-1600585153490-76fb20a32601?w=800&q=80')` }}
             />
           </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="section-padding bg-[#f8f6f3]">
+      <section className="py-24 bg-[#0b0e13] border-y border-white/5">
         <div className="container">
-          <div className="text-center mb-12">
-            <p className="text-[#c8a96e] tracking-[0.3em] text-xs uppercase mb-3 font-medium">
+          <div className="text-center mb-14">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-[#c9a84c] text-[11px] tracking-[0.42em] uppercase mb-4"
+            >
               What We Stand For
-            </p>
-            <h2 className="text-3xl md:text-4xl font-light tracking-wide">
-              Our <span className="font-bold">Values</span>
-            </h2>
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-5xl font-light text-white"
+              style={{ fontFamily: 'var(--font-cormorant)' }}
+            >
+              Our Values
+            </motion.h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((v) => (
-              <div
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {values.map((v, i) => (
+              <motion.div
                 key={v.title}
-                className="bg-white p-6 border border-gray-100 hover:border-[#c8a96e] transition-colors duration-200"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="border border-white/7 hover:border-[#c9a84c]/25 p-8 transition-all duration-400 hover:bg-[#c9a84c]/3"
               >
-                <h3 className="text-base font-semibold tracking-wide mb-3 text-[#0f1923]">
-                  {v.title}
-                </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{v.description}</p>
-              </div>
+                <h3 className="text-white font-medium text-sm tracking-wide mb-3">{v.title}</h3>
+                <p className="text-white/32 text-sm leading-relaxed">{v.desc}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Team */}
-      <section className="section-padding bg-white">
-        <div className="container">
-          <div className="text-center mb-12">
-            <p className="text-[#c8a96e] tracking-[0.3em] text-xs uppercase mb-3 font-medium">
-              The People Behind KYR
-            </p>
-            <h2 className="text-3xl md:text-4xl font-light tracking-wide">
-              Our <span className="font-bold">Team</span>
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            {team.map((member) => (
-              <div key={member.name} className="text-center group">
-                <div className="overflow-hidden mb-4">
-                  <div
-                    className="h-64 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                    style={{ backgroundImage: `url(${member.image})` }}
-                  />
-                </div>
-                <h3 className="text-base font-semibold tracking-wide">{member.name}</h3>
-                <p className="text-sm text-[#c8a96e] mt-1 tracking-wide">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
+    </div>
   )
 }

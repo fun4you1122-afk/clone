@@ -1,17 +1,12 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #07090d;
-  --color-primary: #07090d;
+  --color-bg: #030507;
+  --color-surface: #0b0e13;
   --color-gold: #c9a84c;
   --color-gold-light: #e2c47e;
   --color-gold-dark: #a88a38;
-  --color-cream: #f5f0e8;
-  --color-surface: #0e1117;
-  --color-surface-2: #141820;
-  --color-border: rgba(255,255,255,0.08);
-  --color-text: #f5f0e8;
-  --color-text-muted: rgba(245,240,232,0.45);
+  --color-text: #f0ece0;
   --font-sans: var(--font-geist-sans);
   --font-serif: var(--font-cormorant);
 }
@@ -21,29 +16,26 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  max-width: 100vw;
 }
 
 body {
   font-family: var(--font-sans), Arial, sans-serif;
-  background: #07090d;
-  color: var(--color-text);
+  background: #030507;
+  color: #f0ece0;
   overflow-x: hidden;
-  max-width: 100vw;
 }
 
 .container {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
 }
 
-/* Gold gradient text */
 .gold-text {
   background: linear-gradient(135deg, #c9a84c 0%, #e2c47e 50%, #a88a38 100%);
   -webkit-background-clip: text;
@@ -51,52 +43,13 @@ body {
   background-clip: text;
 }
 
-/* Marquee */
-@keyframes marquee {
+@keyframes ticker {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
-.animate-marquee { animation: marquee 30s linear infinite; }
+.run-ticker { animation: ticker 28s linear infinite; }
 
-/* Key insert animation */
-@keyframes keyInsert {
-  0%   { transform: translateX(-30px) rotate(-20deg); opacity: 0; }
-  60%  { transform: translateX(0)    rotate(0deg);   opacity: 1; }
-  80%  { transform: translateX(2px)  rotate(3deg);   opacity: 1; }
-  100% { transform: translateX(0)    rotate(0deg);   opacity: 1; }
-}
-.animate-key-insert { animation: keyInsert 1.2s ease-out forwards; }
-
-/* Door open animation */
-@keyframes doorOpen {
-  from { transform: perspective(800px) rotateY(0deg); }
-  to   { transform: perspective(800px) rotateY(-45deg); }
-}
-.animate-door-open { animation: doorOpen 1.4s ease-out forwards; transform-origin: left center; }
-
-/* Custom scrollbar */
 ::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: #07090d; }
+::-webkit-scrollbar-track { background: #030507; }
 ::-webkit-scrollbar-thumb { background: #c9a84c44; border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: #c9a84c; }
-
-/* Hero gradient overlay */
-.hero-gradient {
-  background: linear-gradient(
-    to bottom,
-    rgba(7,9,13,0.2) 0%,
-    rgba(7,9,13,0.05) 35%,
-    rgba(7,9,13,0.4) 75%,
-    rgba(7,9,13,1) 100%
-  );
-}
-
-/* Section padding */
-.section-padding { padding: 120px 0; }
-@media (max-width: 768px) { .section-padding { padding: 72px 0; } }
-
-/* Gold divider */
-.gold-line {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #c9a84c, transparent);
-}
+::-webkit-scrollbar-thumb:hover { background: #c9a84c88; }
