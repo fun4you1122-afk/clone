@@ -1,53 +1,106 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #ffffff;
-  --color-foreground: #1c1c1c;
-  --color-primary: #0f1923;
-  --color-gold: #c8a96e;
-  --color-gold-light: #d4b87a;
-  --color-gold-dark: #b8954e;
-  --color-cream: #f8f6f3;
-  --color-cream-dark: #f0ece6;
-  --color-gray-light: #f5f5f5;
-  --color-gray-mid: #999999;
-  --color-gray-dark: #666666;
-  --color-text-dark: #1c1c1c;
-  --color-text-light: #ffffff;
-  --color-border: #e5e5e5;
+  --color-background: #07090d;
+  --color-primary: #07090d;
+  --color-gold: #c9a84c;
+  --color-gold-light: #e2c47e;
+  --color-gold-dark: #a88a38;
+  --color-cream: #f5f0e8;
+  --color-surface: #0e1117;
+  --color-surface-2: #141820;
+  --color-border: rgba(255,255,255,0.08);
+  --color-text: #f5f0e8;
+  --color-text-muted: rgba(245,240,232,0.45);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-cormorant);
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  color: var(--color-text-dark);
-  background: #ffffff;
+  font-family: var(--font-sans), Arial, sans-serif;
+  background: #07090d;
+  color: var(--color-text);
+  overflow-x: hidden;
 }
 
+.font-serif { font-family: var(--font-serif), Georgia, serif; }
+
 .container {
-  max-width: 1280px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-.section-padding {
-  padding: 80px 0;
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
 }
 
-@media (max-width: 768px) {
-  .section-padding {
-    padding: 48px 0;
-  }
-  .container {
-    padding: 0 16px;
-  }
+/* Gold gradient text */
+.gold-text {
+  background: linear-gradient(135deg, #c9a84c 0%, #e2c47e 50%, #a88a38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Shimmer on gold line */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #07090d; }
+::-webkit-scrollbar-thumb { background: #c9a84c44; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #c9a84c; }
+
+/* Video overlay gradient */
+.hero-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(7,9,13,0.3) 0%,
+    rgba(7,9,13,0.1) 40%,
+    rgba(7,9,13,0.6) 80%,
+    rgba(7,9,13,1) 100%
+  );
+}
+
+/* Section padding */
+.section-padding { padding: 120px 0; }
+@media (max-width: 768px) { .section-padding { padding: 72px 0; } }
+
+/* Gold divider line */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+}
+
+/* Noise texture overlay */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* 3D card tilt */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease;
 }

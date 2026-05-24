@@ -1,17 +1,23 @@
-import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import FeaturedProperties from "@/components/FeaturedProperties";
-import WhyKYR from "@/components/WhyKYR";
-import MarketInsights from "@/components/MarketInsights";
+import VideoHero from "@/components/VideoHero";
+import ManifestoSection from "@/components/ManifestoSection";
+import BuyingJourney from "@/components/BuyingJourney";
+import PropertyShowcase from "@/components/PropertyShowcase";
+import VideoSection from "@/components/VideoSection";
+import GoldenVisaSection from "@/components/GoldenVisaSection";
+import DeveloperMarquee from "@/components/DeveloperMarquee";
+import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   return (
     <>
-      <HeroSection />
-      <ServicesSection />
-      <FeaturedProperties />
-      <WhyKYR />
-      <MarketInsights />
+      <VideoHero />
+      <DeveloperMarquee />
+      <ManifestoSection />
+      <BuyingJourney />
+      <PropertyShowcase />
+      <VideoSection />
+      <GoldenVisaSection />
+      <ContactSection />
     </>
   );
 }
